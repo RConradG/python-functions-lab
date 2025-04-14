@@ -139,3 +139,41 @@ def product(*args):
 
 print('Exercise 8:', product(-1, 4))
 print('Exercise 8:', product(2, 5, 5))
+
+# Exercise 9: Basic Calculator
+#
+# Create a function named `basic_calculator` that takes three arguments: 
+# two numbers and a string representing an operation ('add', 'subtract', 'multiply', 'divide'). 
+# Perform the provided operation on the two numbers. In operations where the order of numbers is important, 
+# treat the first parameter as the first operand and the second parameter as the second operand.
+#
+# Examples:
+# basic_calculator(10, 5, 'subtract') should return 5.
+# basic_calculator(10, 5, 'add') should return 15.
+# basic_calculator(10, 5, 'multiply') should return 50.
+# basic_calculator(10, 5, 'divide') should return 2.
+#
+# Define the function and then call it below.
+
+def basic_calculator(num1, num2, operation):
+  if operation == 'add':
+    return num1 + num2
+  elif operation == 'subtract':
+    return num1 - num2
+  elif operation == 'multiply':
+    return num1 * num2
+  elif operation == 'divide':
+    if num2 == 0:
+      print("the divisor cannot equal 0")
+      return
+    else:
+      return num1 / num2
+  else:
+    print("That is not a basic operation!")
+
+
+print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
+print('Exercise 9 Result:', basic_calculator(10, 5, "add"))
+print('Exercise 9 Result:', basic_calculator(10, 5, "multiply"))
+print('Exercise 9 Result:', basic_calculator(10, 5, "divide"))
+print('Exercise 9 Result:', basic_calculator(10, 0, "divide"))
