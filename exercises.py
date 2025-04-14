@@ -47,11 +47,13 @@ print("Exercise 2:", simple_interest(1500, 3.5, 5))
 #
 # Define your function and call it to display the discounted price.
 
+
 def apply_discount(price, discount_perc):
     return price - (price * discount_perc / 100)
 
-print('Exercise 3:', apply_discount(100, 25))
-print('Exercise 3:', apply_discount(80, 10))
+
+print("Exercise 3:", apply_discount(100, 25))
+print("Exercise 3:", apply_discount(80, 10))
 
 # Exercise 5: Sum to N
 #
@@ -63,13 +65,38 @@ print('Exercise 3:', apply_discount(80, 10))
 #
 # Define the function and then call it below.
 
+
 def sum_to(integer):
-  sum = 0
-  for number in range(integer + 1):
-      sum += number
+    sum = 0
+    for number in range(integer + 1):
+        sum += number
 
-  return sum
+    return sum
 
-print('Exercise 5:', sum_to(6))
-print('Exercise 5:', sum_to(10))
+
+print("Exercise 5:", sum_to(6))
+print("Exercise 5:", sum_to(10))
+
+# Exercise 6: Find the Largest Number
+#
+# Write a function named `largest` that takes three integers as arguments and returns the largest of them.
+#
+# Examples:
+# largest(1, 2, 3) should return 3.
+# largest(10, 4, 2) should return 10.
+#
+# Define your function and test it with different inputs.
+
+def largest(num1, num2, num3):
+  num_list = [num1, num2, num3]
+  largest_num = num_list[0]
+  
+  for num in num_list:
+    if largest_num < num:
+      largest_num = num
+      
+  return largest_num
+
+print("Exercise 6:", largest(1, 2, 3))
+print("Exercise 6:", largest(10, 4, 2))
 
