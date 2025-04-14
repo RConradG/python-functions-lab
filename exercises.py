@@ -48,7 +48,28 @@ print("Exercise 2:", simple_interest(1500, 3.5, 5))
 # Define your function and call it to display the discounted price.
 
 def apply_discount(price, discount_perc):
-  return price - (price * discount_perc / 100)
+    return price - (price * discount_perc / 100)
 
 print('Exercise 3:', apply_discount(100, 25))
 print('Exercise 3:', apply_discount(80, 10))
+
+# Exercise 5: Sum to N
+#
+# Write a function named `sum_to` that takes a single integer n and returns the sum of all integers from 1 to n.
+#
+# Examples:
+# sum_to(6) should return 21.
+# sum_to(10) should return 55.
+#
+# Define the function and then call it below.
+
+def sum_to(integer):
+  sum = 0
+  for number in range(integer + 1):
+      sum += number
+
+  return sum
+
+print('Exercise 5:', sum_to(6))
+print('Exercise 5:', sum_to(10))
+
