@@ -87,16 +87,55 @@ print("Exercise 5:", sum_to(10))
 #
 # Define your function and test it with different inputs.
 
+
 def largest(num1, num2, num3):
-  num_list = [num1, num2, num3]
-  largest_num = num_list[0]
-  
-  for num in num_list:
-    if largest_num < num:
-      largest_num = num
-      
-  return largest_num
+    num_list = [num1, num2, num3]
+    largest_num = num_list[0]
+
+    for num in num_list:
+        if largest_num < num:
+            largest_num = num
+
+    return largest_num
+
 
 print("Exercise 6:", largest(1, 2, 3))
 print("Exercise 6:", largest(10, 4, 2))
 
+# Exercise 7: Calculate a Tip
+#
+# Create a function called `calculate_tip`. It should take the bill amount and the tip percentage (as a whole number).
+# The function should return the amount of the tip.
+#
+# Examples:
+# calculate_tip(50, 20) should return 10.
+#
+# Write your function and test its output below.
+
+
+def calculate_tip(bill, tip_percentage):
+    return bill * tip_percentage / 100
+
+
+print("Exercise 7:", calculate_tip(50, 20))
+
+
+# Exercise 8: Calculate Product of Numbers
+#
+# Write a function named `product` that takes an arbitrary number of numbers, multiplies them, and returns the product.
+# Review your notes on *args for handling an arbitrary number of arguments.
+#
+# Examples:
+# product(-1, 4) should return -4.
+# product(2, 5, 5) should return 50.
+#
+# Define the function and call it with different sets of numbers to test.
+
+def product(*args):
+  product = 1
+  for arg in args:
+    product *= arg
+  return product
+
+print('Exercise 8:', product(-1, 4))
+print('Exercise 8:', product(2, 5, 5))
